@@ -1,0 +1,677 @@
+577, Bruno Silva, 0.32, Reprovado
+417, Renato Almeida, 0.34, Reprovado
+222, Helena Almeida, 0.46, Reprovado
+873, Ana Silva, 0.53, Reprovado
+337, Juliana Souza, 0.54, Reprovado
+340, Fernanda Costa, 0.56, Reprovado
+135, Kaio Rodrigues, 0.65, Reprovado
+192, Paula Almeida, 0.67, Reprovado
+208, Igor Rodrigues, 0.81, Reprovado
+164, Juliana Oliveira, 0.81, Reprovado
+866, Natália Silva, 0.82, Reprovado
+959, Bruno Almeida, 0.85, Reprovado
+797, Igor Souza, 0.87, Reprovado
+759, Juliana Gomes, 0.92, Reprovado
+781, Fernanda Souza, 0.92, Reprovado
+439, Igor Silva, 0.93, Reprovado
+300, Carlos Lima, 0.94, Reprovado
+136, Paula Souza, 0.95, Reprovado
+  3, Renato Nascimento, 0.96, Reprovado
+742, Larissa Oliveira, 1.03, Reprovado
+584, Carlos Almeida, 1.03, Reprovado
+667, Natália Oliveira, 1.06, Reprovado
+121, Tiago Nascimento, 1.11, Reprovado
+475, Daniela Oliveira, 1.12, Reprovado
+956, Sara Souza, 1.12, Reprovado
+202, Carlos Costa, 1.16, Reprovado
+246, Natália Gomes, 1.19, Reprovado
+273, Juliana Pereira, 1.26, Reprovado
+818, Otávio Gomes, 1.26, Reprovado
+145, Bruno Pereira, 1.28, Reprovado
+451, Natália Almeida, 1.29, Reprovado
+932, Carlos Gomes, 1.32, Reprovado
+323, Viviane Costa, 1.33, Reprovado
+186, Kaio Gomes, 1.37, Reprovado
+544, Gabriel Rodrigues, 1.39, Reprovado
+281, Daniela Nascimento, 1.40, Reprovado
+454, Tiago Rodrigues, 1.43, Reprovado
+868, Helena Nascimento, 1.46, Reprovado
+887, Paula Rodrigues, 1.53, Reprovado
+ 16, Gabriel Souza, 1.53, Reprovado
+568, Paula Nascimento, 1.55, Reprovado
+ 53, Gabriel Lima, 1.55, Reprovado
+ 49, Viviane Nascimento, 1.57, Reprovado
+912, Gabriel Lima, 1.58, Reprovado
+412, Marcos Gomes, 1.61, Reprovado
+658, Ana Pereira, 1.61, Reprovado
+747, Marcos Silva, 1.62, Reprovado
+ 30, Viviane Oliveira, 1.67, Reprovado
+984, Fernanda Costa, 1.68, Reprovado
+852, Larissa Almeida, 1.68, Reprovado
+947, Eduardo Oliveira, 1.68, Reprovado
+474, Eduardo Gomes, 1.70, Reprovado
+290, Natália Gomes, 1.72, Reprovado
+904, Marcos Pereira, 1.72, Reprovado
+429, Bruno Costa, 1.72, Reprovado
+536, Kaio Oliveira, 1.73, Reprovado
+333, Paula Almeida, 1.74, Reprovado
+122, Natália Nascimento, 1.74, Reprovado
+560, Bruno Lima, 1.76, Reprovado
+389, Kaio Nascimento, 1.76, Reprovado
+127, Igor Silva, 1.77, Reprovado
+877, Helena Oliveira, 1.77, Reprovado
+249, Tiago Pereira, 1.78, Reprovado
+156, Kaio Pereira, 1.80, Reprovado
+999, Gabriel Oliveira, 1.80, Reprovado
+154, Renato Rodrigues, 1.83, Reprovado
+580, Ana Pereira, 1.87, Reprovado
+190, Helena Gomes, 1.87, Reprovado
+484, Renato Nascimento, 1.89, Reprovado
+515, Carlos Lima, 1.89, Reprovado
+181, Viviane Almeida, 1.90, Reprovado
+662, Igor Costa, 1.91, Reprovado
+268, Marcos Rodrigues, 1.92, Reprovado
+733, Natália Gomes, 1.93, Reprovado
+256, Viviane Rodrigues, 1.94, Reprovado
+710, Gabriel Gomes, 1.94, Reprovado
+266, Otávio Nascimento, 1.94, Reprovado
+949, Marcos Costa, 1.96, Reprovado
+606, Natália Lima, 1.97, Reprovado
+476, Juliana Nascimento, 1.97, Reprovado
+260, Gabriel Nascimento, 1.99, Reprovado
+706, Fernanda Almeida, 2.02, Reprovado
+315, Kaio Gomes, 2.05, Reprovado
+881, Juliana Nascimento, 2.07, Reprovado
+263, Paula Almeida, 2.09, Reprovado
+299, Gabriel Nascimento, 2.09, Reprovado
+824, Juliana Oliveira, 2.09, Reprovado
+ 76, Fernanda Pereira, 2.11, Reprovado
+363, Ana Rodrigues, 2.11, Reprovado
+ 54, Eduardo Pereira, 2.12, Reprovado
+228, Natália Lima, 2.12, Reprovado
+665, Carlos Lima, 2.12, Reprovado
+673, Kaio Nascimento, 2.13, Reprovado
+832, Kaio Oliveira, 2.13, Reprovado
+ 18, Daniela Gomes, 2.13, Reprovado
+828, Gabriel Gomes, 2.13, Reprovado
+ 55, Daniela Silva, 2.15, Reprovado
+411, Eduardo Silva, 2.18, Reprovado
+897, Bruno Rodrigues, 2.18, Reprovado
+608, Larissa Costa, 2.19, Reprovado
+916, Juliana Pereira, 2.19, Reprovado
+457, Larissa Pereira, 2.21, Reprovado
+884, Carlos Souza, 2.21, Reprovado
+114, Juliana Costa, 2.25, Reprovado
+600, Carlos Oliveira, 2.25, Reprovado
+ 96, Paula Pereira, 2.26, Reprovado
+675, Larissa Lima, 2.26, Reprovado
+906, Viviane Silva, 2.28, Reprovado
+ 60, Renato Nascimento, 2.29, Reprovado
+288, Sara Pereira, 2.29, Reprovado
+211, Eduardo Souza, 2.31, Reprovado
+591, Sara Pereira, 2.32, Reprovado
+622, Natália Gomes, 2.33, Reprovado
+ 68, Viviane Almeida, 2.34, Reprovado
+609, Sara Souza, 2.34, Reprovado
+669, Carlos Pereira, 2.36, Reprovado
+985, Paula Oliveira, 2.36, Reprovado
+703, Bruno Silva, 2.37, Reprovado
+620, Renato Nascimento, 2.38, Reprovado
+ 48, Gabriel Almeida, 2.38, Reprovado
+858, Carlos Gomes, 2.39, Reprovado
+925, Eduardo Lima, 2.40, Reprovado
+617, Marcos Costa, 2.41, Reprovado
+325, Bruno Silva, 2.41, Reprovado
+787, Carlos Oliveira, 2.43, Reprovado
+867, Paula Silva, 2.44, Reprovado
+973, Gabriel Oliveira, 2.45, Reprovado
+251, Fernanda Pereira, 2.47, Reprovado
+395, Marcos Souza, 2.49, Reprovado
+660, Igor Souza, 2.49, Reprovado
+510, Kaio Almeida, 2.52, Reprovado
+659, Sara Almeida, 2.54, Reprovado
+199, Larissa Pereira, 2.56, Reprovado
+172, Gabriel Lima, 2.56, Reprovado
+201, Sara Oliveira, 2.56, Reprovado
+341, Kaio Souza, 2.57, Reprovado
+601, Natália Costa, 2.57, Reprovado
+853, Natália Lima, 2.58, Reprovado
+933, Paula Rodrigues, 2.59, Reprovado
+291, Tiago Nascimento, 2.60, Reprovado
+587, Juliana Lima, 2.62, Reprovado
+899, Renato Lima, 2.62, Reprovado
+433, Larissa Almeida, 2.62, Reprovado
+745, Helena Almeida, 2.63, Reprovado
+801, Viviane Souza, 2.64, Reprovado
+723, Viviane Souza, 2.67, Reprovado
+863, Paula Oliveira, 2.67, Reprovado
+312, Larissa Pereira, 2.68, Reprovado
+755, Fernanda Gomes, 2.70, Reprovado
+526, Ana Lima, 2.70, Reprovado
+803, Kaio Lima, 2.71, Reprovado
+859, Marcos Nascimento, 2.71, Reprovado
+ 39, Eduardo Oliveira, 2.72, Reprovado
+509, Gabriel Lima, 2.74, Reprovado
+ 81, Gabriel Pereira, 2.75, Reprovado
+368, Ana Almeida, 2.75, Reprovado
+ 71, Bruno Lima, 2.76, Reprovado
+543, Carlos Rodrigues, 2.79, Reprovado
+183, Fernanda Lima, 2.80, Reprovado
+ 90, Tiago Silva, 2.82, Reprovado
+100, Carlos Pereira, 2.82, Reprovado
+936, Eduardo Rodrigues, 2.82, Reprovado
+347, Gabriel Souza, 2.83, Reprovado
+699, Ana Pereira, 2.83, Reprovado
+242, Eduardo Rodrigues, 2.84, Reprovado
+502, Igor Lima, 2.85, Reprovado
+555, Sara Pereira, 2.86, Reprovado
+743, Eduardo Almeida, 2.87, Reprovado
+262, Helena Rodrigues, 2.88, Reprovado
+400, Carlos Souza, 2.88, Reprovado
+652, Sara Pereira, 2.92, Reprovado
+811, Ana Gomes, 2.93, Reprovado
+130, Ana Souza, 2.93, Reprovado
+890, Otávio Oliveira, 2.95, Reprovado
+230, Carlos Costa, 2.97, Reprovado
+ 24, Carlos Rodrigues, 2.97, Reprovado
+685, Juliana Almeida, 2.98, Reprovado
+846, Renato Oliveira, 2.99, Reprovado
+708, Kaio Pereira, 3.01, Reprovado
+180, Natália Costa, 3.02, Reprovado
+442, Otávio Pereira, 3.03, Reprovado
+750, Sara Silva, 3.05, Reprovado
+995, Fernanda Almeida, 3.05, Reprovado
+809, Gabriel Costa, 3.07, Reprovado
+728, Larissa Costa, 3.09, Reprovado
+ 66, Paula Silva, 3.09, Reprovado
+253, Juliana Lima, 3.09, Reprovado
+335, Paula Rodrigues, 3.09, Reprovado
+783, Paula Rodrigues, 3.10, Reprovado
+794, Viviane Nascimento, 3.11, Reprovado
+223, Daniela Costa, 3.12, Reprovado
+564, Bruno Gomes, 3.13, Reprovado
+ 79, Gabriel Oliveira, 3.14, Reprovado
+309, Renato Silva, 3.15, Reprovado
+578, Paula Silva, 3.15, Reprovado
+138, Tiago Lima, 3.16, Reprovado
+611, Natália Oliveira, 3.18, Reprovado
+316, Eduardo Lima, 3.19, Reprovado
+349, Otávio Souza, 3.19, Reprovado
+638, Larissa Nascimento, 3.20, Reprovado
+ 25, Carlos Almeida, 3.20, Reprovado
+292, Igor Pereira, 3.24, Reprovado
+643, Otávio Pereira, 3.24, Reprovado
+ 95, Igor Almeida, 3.24, Reprovado
+229, Carlos Oliveira, 3.25, Reprovado
+446, Carlos Silva, 3.26, Reprovado
+496, Daniela Lima, 3.26, Reprovado
+943, Igor Gomes, 3.26, Reprovado
+356, Bruno Pereira, 3.26, Reprovado
+ 57, Fernanda Oliveira, 3.27, Reprovado
+104, Sara Oliveira, 3.27, Reprovado
+235, Gabriel Lima, 3.28, Reprovado
+366, Natália Nascimento, 3.30, Reprovado
+492, Sara Costa, 3.30, Reprovado
+855, Juliana Lima, 3.31, Reprovado
+793, Igor Costa, 3.32, Reprovado
+519, Kaio Gomes, 3.35, Reprovado
+247, Ana Oliveira, 3.35, Reprovado
+118, Juliana Costa, 3.36, Reprovado
+590, Otávio Nascimento, 3.36, Reprovado
+681, Gabriel Nascimento, 3.36, Reprovado
+802, Igor Nascimento, 3.36, Reprovado
+702, Eduardo Silva, 3.38, Reprovado
+976, Otávio Lima, 3.38, Reprovado
+265, Gabriel Pereira, 3.38, Reprovado
+782, Igor Nascimento, 3.39, Reprovado
+796, Kaio Almeida, 3.40, Reprovado
+168, Gabriel Silva, 3.40, Reprovado
+486, Marcos Almeida, 3.40, Reprovado
+304, Gabriel Souza, 3.41, Reprovado
+385, Tiago Rodrigues, 3.41, Reprovado
+679, Fernanda Rodrigues, 3.43, Reprovado
+911, Bruno Oliveira, 3.43, Reprovado
+721, Juliana Gomes, 3.45, Reprovado
+607, Daniela Silva, 3.45, Reprovado
+518, Bruno Rodrigues, 3.47, Reprovado
+849, Renato Almeida, 3.47, Reprovado
+815, Natália Rodrigues, 3.48, Reprovado
+821, Renato Pereira, 3.49, Reprovado
+416, Carlos Oliveira, 3.50, Reprovado
+696, Gabriel Lima, 3.50, Reprovado
+955, Larissa Lima, 3.50, Reprovado
+586, Viviane Nascimento, 3.50, Reprovado
+381, Igor Nascimento, 3.51, Reprovado
+888, Bruno Oliveira, 3.51, Reprovado
+754, Helena Gomes, 3.51, Reprovado
+892, Daniela Silva, 3.51, Reprovado
+768, Marcos Nascimento, 3.52, Reprovado
+997, Gabriel Costa, 3.52, Reprovado
+705, Larissa Rodrigues, 3.53, Reprovado
+407, Bruno Lima, 3.54, Reprovado
+692, Larissa Gomes, 3.54, Reprovado
+144, Otávio Lima, 3.55, Reprovado
+790, Otávio Gomes, 3.56, Reprovado
+257, Carlos Almeida, 3.57, Reprovado
+200, Kaio Gomes, 3.58, Reprovado
+443, Larissa Pereira, 3.58, Reprovado
+683, Igor Gomes, 3.58, Reprovado
+ 37, Gabriel Oliveira, 3.58, Reprovado
+896, Kaio Nascimento, 3.58, Reprovado
+413, Marcos Souza, 3.59, Reprovado
+739, Igor Silva, 3.59, Reprovado
+977, Carlos Nascimento, 3.59, Reprovado
+746, Renato Silva, 3.61, Reprovado
+ 32, Juliana Nascimento, 3.61, Reprovado
+ 38, Otávio Rodrigues, 3.62, Reprovado
+614, Natália Oliveira, 3.62, Reprovado
+550, Bruno Nascimento, 3.63, Reprovado
+629, Viviane Souza, 3.64, Reprovado
+306, Gabriel Lima, 3.66, Reprovado
+151, Helena Rodrigues, 3.67, Reprovado
+814, Sara Pereira, 3.67, Reprovado
+278, Eduardo Lima, 3.67, Reprovado
+ 70, Paula Nascimento, 3.68, Reprovado
+493, Natália Souza, 3.68, Reprovado
+501, Renato Nascimento, 3.68, Reprovado
+833, Helena Lima, 3.68, Reprovado
+966, Sara Almeida, 3.70, Reprovado
+ 47, Paula Rodrigues, 3.70, Reprovado
+ 50, Renato Oliveira, 3.72, Reprovado
+ 23, Otávio Pereira, 3.72, Reprovado
+597, Paula Gomes, 3.72, Reprovado
+700, Fernanda Costa, 3.74, Reprovado
+964, Carlos Oliveira, 3.74, Reprovado
+318, Tiago Lima, 3.75, Reprovado
+922, Ana Pereira, 3.76, Reprovado
+489, Helena Almeida, 3.79, Reprovado
+981, Viviane Almeida, 3.79, Reprovado
+491, Renato Rodrigues, 3.79, Reprovado
+672, Carlos Oliveira, 3.80, Reprovado
+360, Natália Costa, 3.80, Reprovado
+854, Igor Silva, 3.80, Reprovado
+332, Daniela Souza, 3.80, Reprovado
+191, Marcos Lima, 3.81, Reprovado
+893, Gabriel Rodrigues, 3.81, Reprovado
+561, Otávio Oliveira, 3.82, Reprovado
+603, Renato Souza, 3.82, Reprovado
+927, Fernanda Souza, 3.82, Reprovado
+661, Larissa Rodrigues, 3.83, Reprovado
+974, Fernanda Almeida, 3.83, Reprovado
+344, Igor Souza, 3.84, Reprovado
+392, Tiago Silva, 3.85, Reprovado
+875, Sara Pereira, 3.86, Reprovado
+193, Otávio Gomes, 3.87, Reprovado
+376, Fernanda Rodrigues, 3.87, Reprovado
+780, Sara Costa, 3.87, Reprovado
+778, Daniela Rodrigues, 3.88, Reprovado
+848, Kaio Silva, 3.88, Reprovado
+452, Bruno Nascimento, 3.89, Reprovado
+838, Gabriel Silva, 3.89, Reprovado
+990, Gabriel Gomes, 3.89, Reprovado
+116, Larissa Silva, 3.91, Reprovado
+409, Tiago Souza, 3.91, Reprovado
+574, Carlos Nascimento, 3.91, Reprovado
+688, Natália Silva, 3.91, Reprovado
+718, Renato Nascimento, 3.92, Reprovado
+968, Otávio Souza, 3.92, Reprovado
+148, Helena Souza, 3.93, Reprovado
+820, Helena Almeida, 3.93, Reprovado
+886, Natália Silva, 3.95, Reprovado
+437, Natália Lima, 3.97, Reprovado
+479, Helena Costa, 3.98, Reprovado
+885, Juliana Lima, 3.99, Reprovado
+236, Gabriel Silva, 4.00, Reprovado
+465, Fernanda Silva, 4.01, Reprovado
+346, Paula Costa, 4.03, Reprovado
+565, Juliana Oliveira, 4.03, Reprovado
+487, Paula Oliveira, 4.03, Reprovado
+720, Marcos Nascimento, 4.04, Reprovado
+ 40, Ana Nascimento, 4.05, Reprovado
+ 77, Marcos Lima, 4.05, Reprovado
+352, Paula Souza, 4.05, Reprovado
+469, Daniela Costa, 4.05, Reprovado
+552, Sara Souza, 4.07, Reprovado
+514, Juliana Gomes, 4.07, Reprovado
+436, Kaio Silva, 4.08, Reprovado
+176, Sara Oliveira, 4.09, Reprovado
+704, Renato Silva, 4.09, Reprovado
+668, Renato Souza, 4.09, Reprovado
+ 88, Daniela Silva, 4.10, Reprovado
+989, Otávio Rodrigues, 4.10, Reprovado
+226, Viviane Oliveira, 4.10, Reprovado
+709, Renato Rodrigues, 4.14, Reprovado
+792, Paula Almeida, 4.14, Reprovado
+952, Renato Silva, 4.14, Reprovado
+991, Natália Nascimento, 4.14, Reprovado
+596, Paula Gomes, 4.14, Reprovado
+317, Carlos Silva, 4.14, Reprovado
+806, Natália Almeida, 4.16, Reprovado
+105, Daniela Costa, 4.18, Reprovado
+382, Daniela Almeida, 4.18, Reprovado
+441, Ana Rodrigues, 4.18, Reprovado
+567, Juliana Nascimento, 4.20, Reprovado
+517, Otávio Silva, 4.20, Reprovado
+682, Carlos Rodrigues, 4.20, Reprovado
+404, Helena Pereira, 4.21, Reprovado
+482, Otávio Lima, 4.21, Reprovado
+644, Ana Costa, 4.21, Reprovado
+418, Larissa Pereira, 4.22, Reprovado
+450, Juliana Silva, 4.23, Reprovado
+254, Sara Souza, 4.25, Reprovado
+225, Kaio Almeida, 4.26, Reprovado
+423, Fernanda Rodrigues, 4.26, Reprovado
+975, Marcos Gomes, 4.26, Reprovado
+624, Eduardo Pereira, 4.26, Reprovado
+713, Kaio Souza, 4.26, Reprovado
+132, Otávio Oliveira, 4.26, Reprovado
+894, Helena Oliveira, 4.28, Reprovado
+219, Bruno Lima, 4.28, Reprovado
+740, Bruno Pereira, 4.28, Reprovado
+576, Viviane Almeida, 4.29, Reprovado
+378, Bruno Souza, 4.30, Reprovado
+808, Kaio Lima, 4.30, Reprovado
+410, Kaio Costa, 4.30, Reprovado
+506, Larissa Almeida, 4.31, Reprovado
+540, Gabriel Costa, 4.32, Reprovado
+635, Igor Almeida, 4.32, Reprovado
+678, Renato Rodrigues, 4.32, Reprovado
+554, Natália Costa, 4.33, Reprovado
+935, Bruno Gomes, 4.34, Reprovado
+850, Natália Nascimento, 4.34, Reprovado
+327, Gabriel Lima, 4.34, Reprovado
+571, Bruno Nascimento, 4.34, Reprovado
+874, Natália Pereira, 4.35, Reprovado
+210, Eduardo Gomes, 4.37, Reprovado
+289, Bruno Costa, 4.37, Reprovado
+401, Eduardo Nascimento, 4.38, Reprovado
+511, Sara Gomes, 4.40, Reprovado
+  2, Kaio Pereira, 4.41, Reprovado
+634, Carlos Lima, 4.41, Reprovado
+431, Marcos Lima, 4.41, Reprovado
+227, Ana Nascimento, 4.42, Reprovado
+468, Sara Souza, 4.42, Reprovado
+674, Fernanda Gomes, 4.42, Reprovado
+569, Tiago Lima, 4.45, Reprovado
+992, Larissa Souza, 4.45, Reprovado
+ 73, Carlos Pereira, 4.46, Reprovado
+751, Daniela Costa, 4.47, Reprovado
+748, Helena Gomes, 4.48, Reprovado
+836, Kaio Almeida, 4.48, Reprovado
+871, Daniela Almeida, 4.49, Reprovado
+843, Paula Rodrigues, 4.49, Reprovado
+538, Fernanda Lima, 4.49, Reprovado
+963, Ana Souza, 4.49, Reprovado
+ 41, Helena Silva, 4.50, Reprovado
+275, Fernanda Souza, 4.51, Reprovado
+958, Paula Lima, 4.51, Reprovado
+639, Ana Rodrigues, 4.52, Reprovado
+776, Kaio Almeida, 4.53, Reprovado
+490, Eduardo Rodrigues, 4.53, Reprovado
+447, Ana Souza, 4.54, Reprovado
+197, Eduardo Gomes, 4.55, Reprovado
+187, Kaio Costa, 4.57, Reprovado
+923, Tiago Pereira, 4.57, Reprovado
+128, Igor Costa, 4.57, Reprovado
+532, Fernanda Oliveira, 4.58, Reprovado
+557, Daniela Costa, 4.59, Reprovado
+950, Kaio Rodrigues, 4.59, Reprovado
+753, Daniela Nascimento, 4.59, Reprovado
+ 36, Marcos Rodrigues, 4.60, Reprovado
+ 78, Carlos Lima, 4.60, Reprovado
+432, Natália Costa, 4.61, Reprovado
+463, Otávio Nascimento, 4.61, Reprovado
+ 51, Gabriel Souza, 4.62, Reprovado
+504, Marcos Silva, 4.62, Reprovado
+845, Daniela Costa, 4.63, Reprovado
+735, Kaio Pereira, 4.64, Reprovado
+819, Viviane Oliveira, 4.64, Reprovado
+336, Igor Almeida, 4.66, Reprovado
+527, Renato Gomes, 4.66, Reprovado
+982, Eduardo Costa, 4.66, Reprovado
+ 20, Carlos Lima, 4.67, Reprovado
+ 87, Marcos Souza, 4.67, Reprovado
+238, Juliana Gomes, 4.67, Reprovado
+408, Juliana Almeida, 4.68, Reprovado
+270, Larissa Rodrigues, 4.68, Reprovado
+642, Bruno Oliveira, 4.68, Reprovado
+ 43, Sara Costa, 4.69, Reprovado
+495, Kaio Silva, 4.70, Reprovado
+ 80, Fernanda Souza, 4.70, Reprovado
+531, Kaio Costa, 4.70, Reprovado
+616, Helena Rodrigues, 4.70, Reprovado
+471, Eduardo Oliveira, 4.72, Reprovado
+841, Gabriel Pereira, 4.72, Reprovado
+670, Helena Souza, 4.72, Reprovado
+900, Fernanda Souza, 4.72, Reprovado
+914, Paula Oliveira, 4.74, Reprovado
+348, Gabriel Almeida, 4.74, Reprovado
+938, Eduardo Souza, 4.74, Reprovado
+726, Juliana Oliveira, 4.74, Reprovado
+749, Juliana Oliveira, 4.75, Reprovado
+124, Gabriel Rodrigues, 4.76, Reprovado
+719, Viviane Oliveira, 4.76, Reprovado
+367, Tiago Silva, 4.76, Reprovado
+125, Juliana Costa, 4.76, Reprovado
+  0, Otávio Silva, 4.77, Reprovado
+329, Gabriel Costa, 4.77, Reprovado
+355, Tiago Pereira, 4.78, Reprovado
+198, Sara Oliveira, 4.78, Reprovado
+310, Fernanda Almeida, 4.78, Reprovado
+716, Renato Silva, 4.78, Reprovado
+931, Sara Lima, 4.78, Reprovado
+585, Paula Costa, 4.80, Reprovado
+593, Helena Nascimento, 4.80, Reprovado
+599, Larissa Souza, 4.80, Reprovado
+415, Viviane Costa, 4.80, Reprovado
+840, Otávio Oliveira, 4.80, Reprovado
+860, Tiago Pereira, 4.80, Reprovado
+917, Bruno Nascimento, 4.80, Reprovado
+785, Daniela Nascimento, 4.80, Reprovado
+ 44, Sara Pereira, 4.81, Reprovado
+302, Igor Oliveira, 4.81, Reprovado
+324, Igor Gomes, 4.81, Reprovado
+403, Eduardo Rodrigues, 4.82, Reprovado
+583, Marcos Rodrigues, 4.82, Reprovado
+636, Fernanda Lima, 4.82, Reprovado
+142, Paula Nascimento, 4.83, Reprovado
+687, Kaio Pereira, 4.84, Reprovado
+161, Carlos Souza, 4.85, Reprovado
+ 56, Sara Almeida, 4.85, Reprovado
+880, Daniela Pereira, 4.86, Reprovado
+119, Helena Pereira, 4.88, Reprovado
+184, Bruno Costa, 4.89, Reprovado
+ 21, Viviane Gomes, 4.89, Reprovado
+693, Carlos Gomes, 4.89, Reprovado
+150, Larissa Souza, 4.89, Reprovado
+453, Natália Rodrigues, 4.90, Reprovado
+213, Fernanda Almeida, 4.91, Reprovado
+633, Juliana Almeida, 4.94, Reprovado
+244, Otávio Pereira, 4.95, Reprovado
+369, Igor Lima, 4.95, Reprovado
+752, Bruno Souza, 4.95, Reprovado
+112, Carlos Souza, 4.97, Reprovado
+339, Ana Pereira, 4.97, Reprovado
+928, Ana Almeida, 4.97, Reprovado
+546, Larissa Souza, 4.97, Reprovado
+252, Natália Souza, 4.97, Reprovado
+357, Renato Costa, 4.97, Reprovado
+259, Tiago Silva, 4.98, Reprovado
+610, Gabriel Oliveira, 4.98, Reprovado
+391, Eduardo Souza, 4.98, Reprovado
+830, Carlos Lima, 4.98, Reprovado
+220, Gabriel Gomes, 4.99, Reprovado
+926, Eduardo Lima, 4.99, Reprovado
+592, Paula Nascimento, 4.99, Reprovado
+189, Igor Almeida, 5.01, Reprovado
+107, Daniela Rodrigues, 5.01, Reprovado
+272, Fernanda Oliveira, 5.01, Reprovado
+ 65, Gabriel Costa, 5.01, Reprovado
+637, Ana Almeida, 5.02, Reprovado
+691, Eduardo Oliveira, 5.03, Reprovado
+998, Bruno Oliveira, 5.03, Reprovado
+579, Fernanda Souza, 5.05, Reprovado
+767, Marcos Almeida, 5.05, Reprovado
+353, Kaio Almeida, 5.05, Reprovado
+261, Paula Rodrigues, 5.06, Reprovado
+829, Renato Rodrigues, 5.07, Reprovado
+343, Tiago Rodrigues, 5.07, Reprovado
+800, Marcos Almeida, 5.07, Reprovado
+  7, Daniela Pereira, 5.07, Reprovado
+732, Kaio Lima, 5.07, Reprovado
+631, Bruno Silva, 5.08, Reprovado
+167, Tiago Gomes, 5.09, Reprovado
+218, Eduardo Costa, 5.09, Reprovado
+539, Marcos Rodrigues, 5.09, Reprovado
+204, Gabriel Rodrigues, 5.10, Reprovado
+570, Helena Pereira, 5.10, Reprovado
+909, Larissa Gomes, 5.11, Reprovado
+618, Carlos Souza, 5.12, Reprovado
+771, Larissa Pereira, 5.14, Reprovado
+948, Tiago Nascimento, 5.15, Reprovado
+537, Renato Oliveira, 5.16, Reprovado
+  4, Eduardo Souza, 5.17, Reprovado
+516, Marcos Souza, 5.17, Reprovado
+305, Bruno Rodrigues, 5.17, Reprovado
+303, Renato Costa, 5.18, Reprovado
+157, Paula Oliveira, 5.19, Reprovado
+965, Fernanda Pereira, 5.19, Reprovado
+810, Ana Silva, 5.20, Reprovado
+ 59, Helena Lima, 5.20, Reprovado
+ 63, Bruno Nascimento, 5.20, Reprovado
+255, Marcos Gomes, 5.20, Reprovado
+817, Viviane Souza, 5.20, Reprovado
+734, Helena Gomes, 5.25, Reprovado
+915, Eduardo Oliveira, 5.26, Reprovado
+545, Renato Oliveira, 5.26, Reprovado
+969, Gabriel Nascimento, 5.26, Reprovado
+373, Carlos Pereira, 5.26, Reprovado
+ 91, Fernanda Gomes, 5.27, Reprovado
+872, Sara Lima, 5.27, Reprovado
+158, Tiago Oliveira, 5.28, Reprovado
+294, Daniela Rodrigues, 5.28, Reprovado
+101, Larissa Oliveira, 5.28, Reprovado
+738, Daniela Silva, 5.30, Reprovado
+882, Renato Pereira, 5.30, Reprovado
+534, Sara Rodrigues, 5.30, Reprovado
+951, Sara Gomes, 5.30, Reprovado
+929, Larissa Silva, 5.31, Reprovado
+766, Marcos Lima, 5.32, Reprovado
+ 84, Fernanda Nascimento, 5.32, Reprovado
+ 35, Fernanda Almeida, 5.34, Reprovado
+295, Renato Almeida, 5.34, Reprovado
+924, Kaio Oliveira, 5.34, Reprovado
+686, Marcos Nascimento, 5.35, Reprovado
+461, Paula Lima, 5.36, Reprovado
+930, Larissa Pereira, 5.36, Reprovado
+649, Sara Lima, 5.36, Reprovado
+111, Sara Silva, 5.38, Reprovado
+525, Ana Oliveira, 5.39, Reprovado
+701, Natália Souza, 5.39, Reprovado
+588, Bruno Costa, 5.40, Reprovado
+314, Ana Gomes, 5.43, Reprovado
+784, Fernanda Gomes, 5.43, Reprovado
+ 19, Daniela Souza, 5.43, Reprovado
+970, Kaio Rodrigues, 5.43, Reprovado
+774, Paula Almeida, 5.44, Reprovado
+ 97, Eduardo Gomes, 5.44, Reprovado
+582, Larissa Almeida, 5.45, Reprovado
+374, Marcos Rodrigues, 5.45, Reprovado
+648, Daniela Souza, 5.45, Reprovado
+ 67, Igor Gomes, 5.46, Reprovado
+237, Sara Oliveira, 5.46, Reprovado
+837, Daniela Costa, 5.46, Reprovado
+ 69, Tiago Souza, 5.47, Reprovado
+110, Otávio Rodrigues, 5.47, Reprovado
+960, Marcos Lima, 5.48, Reprovado
+372, Marcos Almeida, 5.49, Reprovado
+548, Fernanda Almeida, 5.49, Reprovado
+971, Sara Gomes, 5.49, Reprovado
+ 14, Helena Rodrigues, 5.49, Reprovado
+ 28, Kaio Pereira, 5.50, Reprovado
+141, Bruno Nascimento, 5.51, Reprovado
+714, Juliana Gomes, 5.51, Reprovado
+731, Juliana Pereira, 5.52, Reprovado
+727, Fernanda Oliveira, 5.53, Reprovado
+458, Gabriel Nascimento, 5.53, Reprovado
+905, Ana Oliveira, 5.53, Reprovado
+398, Kaio Rodrigues, 5.54, Reprovado
+ 72, Juliana Rodrigues, 5.55, Reprovado
+533, Kaio Lima, 5.55, Reprovado
+775, Daniela Nascimento, 5.56, Reprovado
+279, Bruno Almeida, 5.57, Reprovado
+941, Juliana Souza, 5.57, Reprovado
+954, Helena Almeida, 5.57, Reprovado
+ 64, Igor Gomes, 5.57, Reprovado
+212, Eduardo Gomes, 5.59, Reprovado
+744, Paula Souza, 5.59, Reprovado
+581, Bruno Costa, 5.59, Reprovado
+918, Ana Rodrigues, 5.59, Reprovado
+390, Gabriel Costa, 5.60, Reprovado
+129, Natália Almeida, 5.60, Reprovado
+  6, Bruno Gomes, 5.62, Reprovado
+248, Marcos Lima, 5.62, Reprovado
+ 15, Daniela Silva, 5.63, Reprovado
+445, Carlos Souza, 5.63, Reprovado
+945, Viviane Oliveira, 5.63, Reprovado
+146, Bruno Gomes, 5.64, Reprovado
+421, Eduardo Lima, 5.64, Reprovado
+120, Igor Rodrigues, 5.65, Reprovado
+397, Natália Nascimento, 5.65, Reprovado
+769, Daniela Costa, 5.65, Reprovado
+711, Viviane Costa, 5.65, Reprovado
+239, Helena Almeida, 5.66, Reprovado
+274, Carlos Oliveira, 5.66, Reprovado
+388, Eduardo Lima, 5.66, Reprovado
+ 92, Ana Souza, 5.68, Reprovado
+967, Larissa Almeida, 5.69, Reprovado
+961, Helena Pereira, 5.69, Reprovado
+ 12, Kaio Souza, 5.69, Reprovado
+296, Fernanda Nascimento, 5.69, Reprovado
+730, Ana Almeida, 5.69, Reprovado
+205, Gabriel Silva, 5.69, Reprovado
+524, Tiago Gomes, 5.70, Reprovado
+789, Daniela Nascimento, 5.70, Reprovado
+170, Marcos Lima, 5.70, Reprovado
+757, Gabriel Silva, 5.70, Reprovado
+361, Otávio Oliveira, 5.72, Reprovado
+123, Marcos Rodrigues, 5.73, Reprovado
+615, Paula Souza, 5.74, Reprovado
+277, Bruno Pereira, 5.76, Reprovado
+393, Carlos Costa, 5.76, Reprovado
+134, Viviane Almeida, 5.78, Reprovado
+573, Daniela Souza, 5.78, Reprovado
+812, Fernanda Nascimento, 5.78, Reprovado
+993, Natália Rodrigues, 5.78, Reprovado
+160, Kaio Silva, 5.79, Reprovado
+876, Juliana Pereira, 5.79, Reprovado
+467, Juliana Nascimento, 5.80, Reprovado
+980, Bruno Oliveira, 5.81, Reprovado
+102, Otávio Almeida, 5.81, Reprovado
+604, Eduardo Pereira, 5.82, Reprovado
+690, Daniela Gomes, 5.82, Reprovado
+359, Ana Silva, 5.82, Reprovado
+334, Otávio Oliveira, 5.83, Reprovado
+178, Juliana Silva, 5.84, Reprovado
+717, Natália Almeida, 5.84, Reprovado
+695, Renato Pereira, 5.84, Reprovado
+879, Sara Pereira, 5.84, Reprovado
+864, Paula Almeida, 5.86, Reprovado
+664, Fernanda Gomes, 5.86, Reprovado
+503, Renato Pereira, 5.86, Reprovado
+645, Fernanda Oliveira, 5.86, Reprovado
+939, Bruno Souza, 5.88, Reprovado
+140, Fernanda Gomes, 5.88, Reprovado
+488, Natália Gomes, 5.89, Reprovado
+508, Natália Pereira, 5.89, Reprovado
+117, Viviane Almeida, 5.90, Reprovado
+589, Tiago Pereira, 5.90, Reprovado
+736, Sara Oliveira, 5.91, Reprovado
+243, Tiago Nascimento, 5.94, Reprovado
+245, Igor Almeida, 5.97, Reprovado
+267, Bruno Rodrigues, 5.97, Reprovado
+478, Renato Lima, 5.97, Reprovado
+293, Natália Silva, 5.98, Reprovado
+342, Paula Costa, 5.98, Reprovado
+865, Ana Pereira, 5.99, Reprovado
+697, Paula Gomes, 5.99, Reprovado
