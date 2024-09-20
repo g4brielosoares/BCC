@@ -260,7 +260,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
     	        break;
     	    case 2:
                 printf("Valor: ");
@@ -270,7 +269,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
                 break;
             case 3:
                 printf("Valor: ");
@@ -282,7 +280,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
                 break;
             case 4:
     	        printf("Valor: ");
@@ -292,7 +289,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
     	        break;
             case 5:
                 if (removerNoInicio(&listaDois)) {
@@ -300,7 +296,6 @@ int main() {
                 } else {
                     printf("Falha ao remover.\n");
                 }
-                getchar();
                 break;
             case 6:
                 if (removerNoFinal(&listaDois)) {
@@ -308,7 +303,6 @@ int main() {
                 } else {
                     printf("Falha ao remover.\n");
                 }
-                getchar();
                 break;
             case 7:
                 printf("Valor: ");
@@ -318,7 +312,6 @@ int main() {
                 } else {
                     printf("Falha ao remover.\n");
                 }
-                getchar();
                 break;
             case 8:
                 printf("Valor: ");
@@ -328,7 +321,6 @@ int main() {
                 } else {
                     printf("Valor nao encontrado.\n");
                 }
-                getchar();
                 break;
             case 9:
                 if (verificarIntegridade(&listaDois)) {
@@ -336,13 +328,12 @@ int main() {
                 } else {
                     printf("Lista incorreta.\n");
                 }
-                getchar();
                 break;
             default:
                 printf("\nOpcao invalida.\n");
-                getchar();
                 break;
     	}
+        getchar();
     	getchar();
 	}
 
