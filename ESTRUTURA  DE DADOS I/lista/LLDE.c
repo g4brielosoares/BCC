@@ -192,6 +192,8 @@ int removerValor(No **lista, int val) {
 }
 
 int verificarIntegridade(No **lista) {
+    if (*lista == NULL) return 0;
+
     No *aux = *lista;
     int count = 0;
 
@@ -205,9 +207,7 @@ int verificarIntegridade(No **lista) {
         count--;
     }
 
-    if (count == 0)
-        return 1;
-    return 0;  
+    return (count == 0);  
 }
 
 void mostrarLista(No *lista) {
@@ -326,7 +326,7 @@ int main() {
                 if (verificarIntegridade(&listaDois)) {
                     printf("Lista correta.\n");
                 } else {
-                    printf("Lista incorreta.\n");
+                    printf("Lista incorreta ou vazia.\n");
                 }
                 break;
             default:
