@@ -9,4 +9,4 @@
 
 ### Technologies Used:
 
-- **Programming Languages**: C
+- **Languages**: C
