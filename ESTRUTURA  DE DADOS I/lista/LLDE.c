@@ -22,9 +22,7 @@ int inserirNoInicio(No **lista, int val) {
     novo->prox = NULL;
     novo->ant = NULL;
     
-    if (novo == NULL) {
-        return 0;
-    } else {
+    if (novo) {
         if (*lista == NULL) {
             *lista = novo;
         } else {
@@ -33,6 +31,8 @@ int inserirNoInicio(No **lista, int val) {
             *lista = novo;
         }
         return 1;
+    } else {
+        return 0;
     }
 }
 
@@ -42,9 +42,7 @@ int inserirNoFinal(No **lista, int val) {
     novo->prox = NULL;
     novo->ant = NULL;
 
-    if (novo == NULL) {
-        return 0;
-    } else {
+    if (novo) {
         if (*lista == NULL) {
             *lista = novo;
         } else {
@@ -55,6 +53,8 @@ int inserirNoFinal(No **lista, int val) {
             novo->ant = aux;
         }
         return 1;
+    } else {
+        return 0;
     }    
 }
 
@@ -64,9 +64,7 @@ int inserirOrdenado(No **lista, int val) {
     novo->prox = NULL;
     novo->ant = NULL;
 
-    if (novo == NULL) {
-        return 0;
-    } else {
+    if (novo) {
         if (*lista == NULL) {
             *lista = novo;
         } else {
@@ -94,6 +92,8 @@ int inserirOrdenado(No **lista, int val) {
             }
         }
         return 1;
+    } else {
+        return 0;
     }    
 }
 
@@ -105,9 +105,7 @@ int inserirAposValor(No **lista, int val, int valAnt) {
     novo->prox = NULL;
     novo->ant = NULL;
 
-    if (novo == NULL) {
-        return 0;
-    } else {
+    if (novo) {
         if (*lista == NULL) {
             *lista = novo;
         } else {
@@ -127,22 +125,25 @@ int inserirAposValor(No **lista, int val, int valAnt) {
             }
         }
         return 1;
+    } else {
+        return 0;
     }    
 }
 
 int removerNoInicio(No **lista) {
-    if (*lista == NULL) {
+    if (*lista) {
+        if ((*lista)->prox == NULL) {
+            *lista = NULL;
+            free(*lista);
+        } else { 
+            No *aux = *lista;
+            *lista = (*lista)->prox;
+            (*lista)->ant = NULL;
+            free(aux);
+        }
+        return 1;
+    } else 
         return 0;
-    } else if ((*lista)->prox == NULL) {
-        *lista = NULL;
-        free(*lista);
-    } else { 
-        No *aux = *lista;
-        *lista = (*lista)->prox;
-        (*lista)->ant = NULL;
-        free(aux);
-    }
-    return 1;
 }
 
 int removerNoFinal(No **lista) {

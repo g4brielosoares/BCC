@@ -10,7 +10,7 @@ typedef struct descritor {
     No *inicio, *fim;
 } Descritor;
 
-int inserirNoInicioDescritor(Descritor *d, int val) {
+int inserirNoInicioDescritorLLSE(Descritor *d, int val) {
     No *novo = (No *) malloc(sizeof(No));
     novo->valor = val;
     novo->prox = NULL;
@@ -29,7 +29,7 @@ int inserirNoInicioDescritor(Descritor *d, int val) {
     }
 }
 
-int inserirNoFinalDescritor(Descritor *d, int val) {
+int inserirNoFinalDescritorLLSE(Descritor *d, int val) {
     No *novo = malloc(sizeof(No));
     novo->valor = val;
     novo->prox = NULL;
@@ -47,90 +47,28 @@ int inserirNoFinalDescritor(Descritor *d, int val) {
     }
 }
 
-void removerNoInicio(No **lista) {
-    if (*lista == NULL) {
-        return;
-    } else {
-        No *aux = *lista;
+int inserirOrdenadoDescritorLLSE(No **lista, int val) {
 
-        *lista = (*lista)->prox;
-        free(aux);
-        return;
-    }
 }
 
-void removerNoFinal(No **lista) {
-    No *aux = *lista;
+int inserirAposValorDescritorLLSE(No **lista, int val, int valAnt) {
 
-    if (*lista == NULL) {
-        return;
-    } else if ((*lista)->prox == NULL) {
-        free(*lista);
-        *lista = NULL;
-        return;
-    } else {
-        for (aux = *lista; aux->prox->prox; aux = aux->prox);
+}
 
-        free(aux->prox);
-        aux->prox = NULL;
-        return;
-    }
+int removerNoInicioDescritorLLSE(No **lista) {
+   
+}
+
+int removerNoFinalDescritorLLSE(No **lista) {
+    
 }
 
 
-void removerNoIndice(No **lista, int indice) {
-    if (indice == 0) {
-        removerNoInicio(lista);
-        return;
-    }
+int removerNoIndiceDescritorLLSE(No **lista, int indice) {
 
-    No *atual = *lista, *anterior = NULL;
-
-    for (int i = 0; atual && i < indice; i++) {
-        anterior = atual;
-        atual = atual->prox;
-    }
-
-    if (atual == NULL) return;
-
-    anterior->prox = atual->prox;
-    free(atual);
-    return;
 }
 
-No* removerValor(No **lista, int val) {
-    No *aux, *remover = NULL;
-
-    if (*lista) {
-        if ((*lista)->valor == val) {
-            remover = *lista;
-            *lista = remover->prox;
-        } else {
-            for (aux = *lista; aux && aux->prox->valor != val; aux = aux->prox);
-            if (aux) {
-                remover = aux->prox;
-                aux->prox = remover->prox;
-            }
-        }
-    }
-    return remover;
-}
-
-float media(No **lista) {
-    int soma = 0, total = 0;
-
-    if (lista == NULL) {
-        return 0;
-    } else {
-        for (No *aux = *lista; aux; aux = aux->prox) {
-            soma = soma + aux->valor;
-            total++;
-        }
-    }
-    return (float)soma / total;
-}
-
-void mostrarLista(Descritor *d) {
+void mostrarListaDescritorLLSE(Descritor *d) {
     if (d->inicio == NULL) {
         printf("Lista vazia.\n");
     } else {
@@ -146,8 +84,14 @@ int menu(Descritor *d) {
     system("clear");
     printf("----> ");
 	mostrarLista(d);
-    printf("[1] - Incluir no inicio.\n");
-    printf("[2] - Incluir no indice.\n");
+    printf("[1] - Inserir no inicio.\n");
+    printf("[2] - Inserir no final.\n");
+    printf("[3] - Inserir Apos Valor.\n");
+    printf("[4] - Inserir ordenado.\n");
+    printf("[5] - Remover no inicio.\n");
+    printf("[6] - Remover no final.\n");
+    printf("[7] - Remover valor.\n");
+    printf("[8] - Buscar valor.\n");
     printf("[0] - Sair.\n");
     printf("\nEscolha uma opcao: ");
     scanf("%d", &opc);
@@ -157,7 +101,7 @@ int menu(Descritor *d) {
 int main() {
     No *listaUm = NULL;
     Descritor *descritorUm;
-    int val;
+    int val, ValAnt;
 
     while (1) {
     	switch (menu(descritorUm)) {
@@ -172,7 +116,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
     	        break;
     	    case 2:
                 printf("Valor: ");
@@ -182,7 +125,6 @@ int main() {
                 } else {
                     printf("Falha ao inserir.\n");
                 }
-                getchar();
                 break;
             case 3:
     	       
@@ -202,13 +144,11 @@ int main() {
             case 8:
             
                 break;
-            case 9:
-
-                break;
             default:
                 printf("\nOpcao invalida.\n");
                 break;
     	}
+        getchar();
     	getchar();
 	}
 
