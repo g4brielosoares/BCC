@@ -8,64 +8,47 @@ typedef struct no {
 
 typedef struct descritor {
     No *inicio, *fim;
+    int qtd;
 } Descritor;
 
 int inserirNoInicioDescritorLLSE(Descritor *d, int val) {
     No *novo = (No *) malloc(sizeof(No));
+    if (novo == NULL) return 0;
+    
     novo->valor = val;
     novo->prox = NULL;
 
-    if (val) {
-        if (d->inicio == NULL) {
-            d->inicio = novo;
-            d->fim = novo;
-        } else {
-            novo->prox = d->inicio;
-            d->inicio = novo;
-        }
-        return 1;
+    if (d->inicio == NULL) {
+        d->inicio = novo;
+        d->fim = novo;
     } else {
-        return 0;
+        novo->prox = d->inicio;
+        d->inicio = novo;
     }
+    d->qtd++;
+    return 1;
 }
 
 int inserirNoFinalDescritorLLSE(Descritor *d, int val) {
     No *novo = malloc(sizeof(No));
+    if (novo == NULL) return 0;
+
     novo->valor = val;
     novo->prox = NULL;
 
-    if (val) {
-        if (d->inicio == NULL) {
-            d->inicio = novo;
-            d->fim = novo;
-        } else {
-            d->fim = novo;
-        }
-        return 1;
+    if (d->inicio == NULL) {
+        d->inicio = novo;
+        d->fim = novo;
     } else {
-        return 0;
+        d->fim->prox = novo;
+        d->fim = novo;
     }
+    d->qtd++;
+    return 1;
 }
 
-int inserirOrdenadoDescritorLLSE(No **lista, int val) {
-
-}
-
-int inserirAposValorDescritorLLSE(No **lista, int val, int valAnt) {
-
-}
-
-int removerNoInicioDescritorLLSE(No **lista) {
-   
-}
-
-int removerNoFinalDescritorLLSE(No **lista) {
+int removerNoInicioDescritorLLSE() {
     
-}
-
-
-int removerNoIndiceDescritorLLSE(No **lista, int indice) {
-
 }
 
 void mostrarListaDescritorLLSE(Descritor *d) {
@@ -79,11 +62,11 @@ void mostrarListaDescritorLLSE(Descritor *d) {
     }
 }
 
-int menu(Descritor *d) {
+int menu(Descritor d) {
     int opc;
     system("clear");
     printf("----> ");
-	mostrarLista(d);
+	mostrarListaDescritorLLSE(&d);
     printf("[1] - Inserir no inicio.\n");
     printf("[2] - Inserir no final.\n");
     printf("[3] - Inserir Apos Valor.\n");
@@ -99,9 +82,12 @@ int menu(Descritor *d) {
 }
 
 int main() {
-    No *listaUm = NULL;
-    Descritor *descritorUm;
-    int val, ValAnt;
+    Descritor descritorUm;
+    int val;
+
+    descritorUm.inicio = NULL;
+    descritorUm.fim = NULL;
+    descritorUm.qtd = 0;
 
     while (1) {
     	switch (menu(descritorUm)) {
@@ -111,7 +97,7 @@ int main() {
     	    case 1:
     	        printf("Valor: ");
                 scanf("%d", &val);
-    	        if (inserirNoInicioDescritor(descritorUm, val)) {
+    	        if (inserirNoInicioDescritorLLSE(&descritorUm, val)) {
                     printf("Valor inserido.\n");
                 } else {
                     printf("Falha ao inserir.\n");
@@ -120,7 +106,7 @@ int main() {
     	    case 2:
                 printf("Valor: ");
                 scanf("%d", &val);
-    	        if (inserirNoFinalDescritor(descritorUm, val)) {
+    	        if (inserirNoFinalDescritorLLSE(&descritorUm, val)) {
                     printf("Valor inserido.\n");
                 } else {
                     printf("Falha ao inserir.\n");
