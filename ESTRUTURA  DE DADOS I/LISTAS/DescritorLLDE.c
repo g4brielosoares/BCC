@@ -52,10 +52,19 @@ int inserirNoFinalDescritorLLDE(Descritor *d, int val) {
 }
 
 int removerNoInicioDescritorLLDE(Descritor *d) {
-    if () {
-        d->inicio = novo;
-        d->fim = novo;
-    } else if ()
+    if (d->inicio == NULL)
+        return 0;
+    if (d->inicio->prox == NULL) {
+        d->inicio = NULL;
+        d->fim = d->inicio;
+        d = NULL;
+        free(d);
+    } else {
+        No *aux = d->inicio;
+        d->inicio = d->inicio->prox;
+        free(aux);
+    }
+    return 1;
 }
 
 void mostrarListaDescritorLLDE(Descritor *d) {
@@ -126,7 +135,11 @@ int main() {
                 
                 break;
             case 5:
-                
+                if (removerNoInicioDescritorLLDE(&descritorUm)) {
+                    printf("Valor removido\n");
+                } else {
+                    printf("Erro ao remover");
+                }
                 break;
             case 6:
                
