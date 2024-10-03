@@ -25,6 +25,7 @@ int inserirNoInicioDescritorLLDE(Descritor *d, int val) {
         d->fim = novo;
     } else {
         novo->prox = d->inicio;
+        novo->prox->ant = novo;
         d->inicio = novo;
     }
     d->qtd++;
@@ -51,19 +52,70 @@ int inserirNoFinalDescritorLLDE(Descritor *d, int val) {
     return 1;
 }
 
+int inserirOrdenadoDescritorLLDE(Descritor *d, int val) {
+    No *novo = malloc(sizeof(No));
+    
+    if (novo == NULL) return 0;
+
+    novo->valor = val;
+    novo->prox = NULL;
+    novo->ant = NULL;
+
+    if (d->inicio == NULL) {
+        d->inicio = NULL;
+        d->fim = NULL;
+    } else if (val < d->inicio->valor) {
+        novo->prox = d->inicio;
+        novo->prox->ant = novo;
+        d->inicio = novo;
+    } else {
+        No *aux = d->inicio;
+        while (aux->prox && val > aux->prox->valor)
+            aux = aux->prox;
+
+        if (aux->prox == NULL) {
+            d->fim->prox = novo;
+            novo->ant = d->fim;
+            d->fim = novo;
+        } else {
+            novo->prox = aux->prox;
+            novo->ant = aux;
+            novo->ant->prox = novo;
+            novo->prox->ant = novo;
+        }
+    }
+    return 1;
+}
+
 int removerNoInicioDescritorLLDE(Descritor *d) {
     if (d->inicio == NULL)
         return 0;
+    
+    No *aux = d->inicio;
     if (d->inicio->prox == NULL) {
         d->inicio = NULL;
         d->fim = d->inicio;
-        d = NULL;
-        free(d);
     } else {
-        No *aux = d->inicio;
         d->inicio = d->inicio->prox;
-        free(aux);
     }
+    d->qtd--;
+    free(aux);
+    return 1;
+}
+
+int removerNoFinalDescritorLLDE(Descritor *d) {
+    if (d->fim == NULL) return 0;
+
+    No *aux = d->fim;
+    if (d->fim->ant == NULL) {
+        d->inicio = NULL;
+        d->fim = NULL;
+    } else {
+        d->fim = d->fim->ant;
+        d->fim->prox = NULL;
+    }
+    d->qtd--;
+    free(aux);
     return 1;
 }
 
@@ -132,7 +184,13 @@ int main() {
     	       
     	        break;
             case 4:
-                
+                printf("Valor: ");
+                scanf("%d", &val);
+    	        if (inserirOrdenadoDescritorLLDE(&descritorUm, val)) {
+                    printf("Valor inserido.\n");
+                } else {
+                    printf("Falha ao inserir.\n");
+                }
                 break;
             case 5:
                 if (removerNoInicioDescritorLLDE(&descritorUm)) {
@@ -142,7 +200,11 @@ int main() {
                 }
                 break;
             case 6:
-               
+                if (removerNoFinalDescritorLLDE(&descritorUm)) {
+                    printf("Valor removido\n");
+                } else {
+                    printf("Erro ao remover");
+                }
                 break;
             case 7:
               
