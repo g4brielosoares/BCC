@@ -60,7 +60,7 @@ int main() {
     p1.topo = 0;
     char str[100];
 
-    gets(str);
+    fgets(str, 99, stdin);
 
     if (isValid(str, &p1))
         printf("Is valid.\n");
