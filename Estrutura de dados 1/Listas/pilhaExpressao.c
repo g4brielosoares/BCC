@@ -28,7 +28,9 @@ int pop(Pilha *p1) {
     return 1;
 }
 
-int checkThePile(Pilha *p1, char caractere) {
+int top(Pilha *p1, char caractere) {
+    if (p1->topo == 0) return 0;
+
     if (caractere == p1->pilha[p1->topo - 1]) {
         pop(p1);
         return 1;
@@ -41,18 +43,20 @@ int isValid(char string[], Pilha *p1) {
     for (int i = 0; string[i] != '\0'; i++) {
         if (string[i] == '[' || string[i] == '{' || string[i] == '(') 
             push(p1, string[i]);
-
+        
+        print(p1);
         if (string[i] == ']')
-            if (!checkThePile(p1, '[')) return 0;
+            if (!top(p1, '[')) return 0;
         
         if (string[i] == '}')
-            if (!checkThePile(p1, '{')) return 0;
+            if (!top(p1, '{')) return 0;
 
         if (string[i] == ')')
-            if (!checkThePile(p1, '(')) return 0;
+            if (!top(p1, '(')) return 0;
     }
 
-    return 1;
+    if (p1->topo == 0) return 1;
+    return 0;
 }
 
 int main() {
