@@ -11,6 +11,8 @@ struct pilha{
 };
 
 Pilha *criar_pilha(){
+    testar_pilha_nula(p);
+
     Pilha *pilha;
     pilha = (Pilha *)malloc(sizeof(Pilha));
     pilha->cabeca = NULL;
@@ -18,17 +20,21 @@ Pilha *criar_pilha(){
 }
 
 void destruir_pilha(Pilha **p){
+    testar_pilha_nula(p);
+
     if (*p == NULL){
         printf("Erro ao usar o TAD.\n");
         exit(0);
     }
     
-    while(desempilhar(p->cabeca));
+    while(desempilhar(*p));
     free(*p);
     *p=NULL;    
 }
 
 int empilhar(Pilha *p, int vlr){
+    testar_pilha_nula(p);
+
     No *novo;
     novo = (No *)malloc(sizeof(No));
     if (novo == NULL)
@@ -46,6 +52,8 @@ int empilhar(Pilha *p, int vlr){
 }
 
 int desempilhar(Pilha *p){
+    testar_pilha_nula(p);
+
     if (p->cabeca == NULL)
         return 0;
     No *aux;
@@ -56,19 +64,24 @@ int desempilhar(Pilha *p){
 }
 
 int *topo(Pilha *p){
+    testar_pilha_nula(p);
+
     if (p->cabeca == NULL)
         return NULL;
     return &p->cabeca->dado;
 }
 
-int testar_pilha(Pilha *p){
-    if (p->cabeca == NULL) {
+void testar_pilha_nula(Pilha *p){
+    if (p == NULL) {
         printf("Erro no TAD.\n");
         exit(0);
     }
-    else 1
 }
 
 void mostrar_pilha(Pilha *p){
-
+    testar_pilha_nula(p);
+    
+    for (Pilha aux = p; aux != NULL; aux = aux->prox) {
+        printf("%d ", aux->dado);
+    }
 }
