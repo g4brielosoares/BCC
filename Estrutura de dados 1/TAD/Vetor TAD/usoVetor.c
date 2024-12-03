@@ -32,7 +32,7 @@ int menu() {
 }
 
 int main() {
-    int a, b, c, opc = 0, ultimo = 0;
+    int a, b, i, j, k, opc = 0, ultimo = 0;
     Vetor *vetores[TAM];
 
     while (1) {
