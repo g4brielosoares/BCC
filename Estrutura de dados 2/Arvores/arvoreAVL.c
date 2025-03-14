@@ -7,8 +7,6 @@ typedef struct no {
     struct no *direita;  // maior
 } No;
 
-
-
 void RSE(No **raiz) {
     printf("RSE(%i)\n", (*raiz)->dado);
     if (*raiz == NULL || (*raiz)->direita == NULL) {
@@ -68,7 +66,7 @@ void correcao(No **raiz) {
 
 }
 
-void Inserir(No **raiz, int dado) {
+void inserir(No **raiz, int dado) {
     if (*raiz == NULL) {
         No *novo = malloc(sizeof(No));
         novo->dado = dado;
@@ -77,15 +75,16 @@ void Inserir(No **raiz, int dado) {
         *raiz = novo;
     } else {
         if (dado > (*raiz)->dado) 
-            Inserir(&(*raiz)->direita, dado);
+            inserir(&(*raiz)->direita, dado);
         else
-            Inserir(&(*raiz)->esquerda, dado);
+            inserir(&(*raiz)->esquerda, dado);
     }
+    correcao(raiz);
 }
 
 void preOrdem(No **raiz) {
     if (*raiz != NULL) {
-        printf("%i ", (*raiz)->dado);
+        printf("%i(%i) ", (*raiz)->dado, fatorBalanceamento(raiz));
         preOrdem(&(*raiz)->esquerda);
         preOrdem(&(*raiz)->direita);
     }
@@ -94,7 +93,7 @@ void preOrdem(No **raiz) {
 void emOrdem(No **raiz) {
     if (*raiz != NULL) {
         preOrdem(&(*raiz)->esquerda);
-        printf("%i ", (*raiz)->dado);
+        printf("%i(%i) ", (*raiz)->dado, fatorBalanceamento(raiz));
         preOrdem(&(*raiz)->direita);
     }
 }
@@ -103,7 +102,7 @@ void posOrdem(No **raiz) {
     if (*raiz != NULL) {
         preOrdem(&(*raiz)->esquerda);
         preOrdem(&(*raiz)->direita);
-        printf("%i ", (*raiz)->dado);
+        printf("%i(%i) ", (*raiz)->dado, fatorBalanceamento(raiz));
     }
 }
 
@@ -261,7 +260,7 @@ int menu(No **raiz) {
     printf("\nFolhas: ");
     mostrarFolhas(raiz);
     printf("\n\n");
-    printf("[1] - Inserir elemento.\n");
+    printf("[1] - inserir elemento.\n");
     printf("[2] - Maior elemento.\n");
     printf("[3] - Menor elemento.\n");
     printf("[4] - Remover maior.\n");
@@ -276,23 +275,14 @@ int menu(No **raiz) {
 int main() {
     No *raiz = NULL;
     int dado, *aux;
-
-    Inserir(&raiz, 15);
-    //correcao(&raiz);
-    Inserir(&raiz, 10);
-    //correcao(&raiz);
-    Inserir(&raiz, 12);
-    RSE(&raiz);
-    preOrdem(&raiz);
     
-    /*
     while (1) {
         switch (menu(&raiz)) {
             case 0:
                 return 0;
             case 1:
                 scanf("%i", &dado);
-                Inserir(&raiz, dado);
+                inserir(&raiz, dado);
 
                 break;
             case 2:
@@ -340,7 +330,6 @@ int main() {
         getchar();
         getchar();
     }
-*/
 
     return 0;
 }
