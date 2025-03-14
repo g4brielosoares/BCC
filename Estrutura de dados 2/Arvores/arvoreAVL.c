@@ -7,7 +7,68 @@ typedef struct no {
     struct no *direita;  // maior
 } No;
 
-void criarNo(No **raiz, int dado) {
+
+
+void RSE(No **raiz) {
+    printf("RSE(%i)\n", (*raiz)->dado);
+    if (*raiz == NULL || (*raiz)->direita == NULL) {
+        printf("Impossivel rotacionar.\n");
+        exit(0);
+    }
+    
+    No *aux = *raiz;
+    *raiz = aux->direita;
+    aux->direita = (*raiz)->esquerda;
+    (*raiz)->esquerda = aux;
+}
+
+void RSD(No **raiz) {
+    printf("RSD(%i)\n", (*raiz)->dado);
+    if (*raiz == NULL || (*raiz)->esquerda == NULL) {
+        printf("Impossivel rotacionar.\n");
+        exit(0);
+    }
+
+    No *aux = *raiz;
+    *raiz = aux->esquerda;
+    aux->esquerda = (*raiz)->direita;
+    (*raiz)->direita = aux;
+}
+
+void RDE(No **raiz) {
+    RSD(&(*raiz)->direita);
+    RSE(raiz);
+}
+
+void RDD(No **raiz) {
+    RSE(&(*raiz)->esquerda);
+    RSD(raiz);
+}
+
+int fatorBalanceamento(No **raiz) {
+    return altura(&(*raiz)->esquerda) - altura(&(*raiz)->direita);
+}
+
+void correcao(No **raiz) {
+    int fator = fatorBalanceamento(raiz);
+
+    if (fator > 1) { // Rotacionar para a direita
+        if (fatorBalanceamento(&(*raiz)->esquerda) < 0) // Rotacao dupla
+            RDD(raiz);
+        else    
+            RSD(raiz);
+    }
+
+    if (fator < -1) { // Rotacionar para a esquerda
+        if (fatorBalanceamento(&(*raiz)->direita) > 0) // Rotacao dupla
+            RDE(raiz);
+        else    
+            RSE(raiz);
+    }
+
+}
+
+void Inserir(No **raiz, int dado) {
     if (*raiz == NULL) {
         No *novo = malloc(sizeof(No));
         novo->dado = dado;
@@ -16,9 +77,9 @@ void criarNo(No **raiz, int dado) {
         *raiz = novo;
     } else {
         if (dado > (*raiz)->dado) 
-            criarNo(&(*raiz)->direita, dado);
+            Inserir(&(*raiz)->direita, dado);
         else
-            criarNo(&(*raiz)->esquerda, dado);
+            Inserir(&(*raiz)->esquerda, dado);
     }
 }
 
@@ -186,40 +247,6 @@ void mostrarCaminho(No **raiz, int valor) {
     printf("%i", (*raiz)->dado);
 }
 
-void RSE(No **raiz) {
-    if (*raiz == NULL || (*raiz)->direita == NULL) {
-        printf("Impossivel rotacionar.\n");
-        exit(0);
-    }
-    
-    No *aux = *raiz;
-    *raiz = aux->direita;
-    aux->direita = (*raiz)->esquerda;
-    (*raiz)->esquerda = aux;
-}
-
-void RSD(No **raiz) {
-    if (*raiz == NULL || (*raiz)->esquerda == NULL) {
-        printf("Impossivel rotacionar.\n");
-        exit(0);
-    }
-
-    No *aux = *raiz;
-    *raiz = aux->esquerda;
-    aux->esquerda = (*raiz)->direita;
-    (*raiz)->direita = aux;
-}
-
-void RDD(No **raiz) {
-    RSE(&(*raiz)->esquerda);
-    RSD(raiz);
-}
-
-void RDE(No **raiz) {
-    RSD(&(*raiz)->direita);
-    RSE(raiz);
-}
-
 int menu(No **raiz) {
     int opc;
     system("cls");
@@ -249,14 +276,23 @@ int menu(No **raiz) {
 int main() {
     No *raiz = NULL;
     int dado, *aux;
-/*
+
+    Inserir(&raiz, 15);
+    //correcao(&raiz);
+    Inserir(&raiz, 10);
+    //correcao(&raiz);
+    Inserir(&raiz, 12);
+    RSE(&raiz);
+    preOrdem(&raiz);
+    
+    /*
     while (1) {
         switch (menu(&raiz)) {
             case 0:
                 return 0;
             case 1:
                 scanf("%i", &dado);
-                criarNo(&raiz, dado);
+                Inserir(&raiz, dado);
 
                 break;
             case 2:
@@ -306,11 +342,5 @@ int main() {
     }
 */
 
-    criarNo(&raiz, 7);
-    criarNo(&raiz, 5);
-    criarNo(&raiz, 3);
-    preOrdem(&raiz);
-    RSD(&(raiz)->direita);
-    preOrdem(&raiz);
     return 0;
 }
