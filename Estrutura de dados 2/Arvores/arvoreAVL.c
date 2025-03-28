@@ -246,6 +246,14 @@ void mostrarCaminho(No **raiz, int valor) {
     printf("%i", (*raiz)->dado);
 }
 
+int perfeitamenteBalanceada(No **raiz) {
+    if (*raiz == NULL) 
+        return 1;
+    if (abs(quantElementos(&(*raiz)->direita), quantElementos(&(*raiz)->esquerda)) > 1) 
+        return 0;
+    return perfeitamenteBalanceada(&(*raiz)->direita) && perfeitamenteBalanceada(&(*raiz)->esquerda); 
+}
+
 int menu(No **raiz) {
     int opc;
     system("cls");
