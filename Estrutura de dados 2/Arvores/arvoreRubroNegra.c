@@ -74,7 +74,35 @@ int vermelho(No *raiz) {
     return 0;
 }
 
-void correcaoPaiEsquerdo(No **noAvaliado) {
+void correcaoPaiDireito(No **raiz, No **noAvaliado) {
+    No *pai = (*noAvaliado)->pai;
+    No *avo = pai->pai;
+    No *tio = avo->esquerda;
+
+    if (vermelho(tio) ){
+        printf("caso 1\n");
+        pai->cor = PRETO;
+        avo->cor = VERMELHO;
+        tio->cor = PRETO;
+        *noAvaliado = avo;
+    } else {
+        if (filhoEsquerdo(noAvaliado)) {
+            printf("caso 2\n");
+            RSD(pai);
+            *noAvaliado = pai->direita;
+        }
+        printf("caso 3\n");
+        RSE(&avo);
+
+        if (avo->pai == NULL)
+            *raiz = novo;
+        
+        pai->cor = PRETO;
+        pai->esquerda->cor = VERMELHO;
+    }    
+}
+
+void correcaoPaiEsquerdo(No **raiz, No **noAvaliado) {
     No *pai = (*noAvaliado)->pai;
     No *avo = pai->pai;
     No *tio = avo->direita;
@@ -86,7 +114,19 @@ void correcaoPaiEsquerdo(No **noAvaliado) {
         tio->cor = PRETO;
         *noAvaliado = avo;
     } else {
-        printf("caso 2 e 3\n");
+        if (!filhoEsquerdo(noAvaliado)) {
+            printf("caso 2\n");
+            rse(pai);
+            *noAvaliado = pai->esquerda;
+        }
+        printf("caso 3\n");
+        rsd(&avo);
+
+        if (avo->pai == NULL)
+            *raiz = novo;
+        
+        pai->cor = PRETO;
+        pai->direita->cor = VERMELHO;
     }    
 }
 
@@ -98,9 +138,10 @@ void correcao(No *noAvaliado) {
         
         if (esquerdo(noAvaliado->pai)) {
             printf("pai esquerdo\n");
+            correcaoPaiEsquerdo(noAvaliado->pai);
         } else {
             printf("pai direito\n");
-            exit(0);
+            correcaoPaiDireito(noAvaliado->pai);
         }
     }
 }
@@ -130,7 +171,7 @@ No *inserir(No **raiz, int dado) {
 
 void inserirRN(No **raiz, int dado) {
     No *novo = inserir(raiz, dado);
-    correcao(novo);
+    correcao(raiz, novo);
     (*raiz)->cor = PRETO;
 }
 
