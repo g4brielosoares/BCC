@@ -41,6 +41,10 @@ void copiarMetade(No **raiz, No ** irmao) {
     (*raiz)->quantidadeDeChaves--;
 }
 
+void obterFilho() {
+
+}
+
 void inserir(No **raiz, int valor) {
     if (*raiz == NULL) {
         *raiz  = criarNo();
@@ -51,7 +55,8 @@ void inserir(No **raiz, int valor) {
             adicionarChave(raiz, valor);
 
         } else {
-
+            No *filho = obterFilho(raiz, valor);
+            inserir(filho, )
         }
     }
 }
