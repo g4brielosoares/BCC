@@ -93,6 +93,18 @@ void contarFrequencia(int *tabela) {
     fclose(entrada);
 }
 
+int altura(NoArvore **raiz) {
+    if (*raiz == NULL) return -1;
+
+    int esquerda = altura(&(*raiz)->esquerda);
+    int direita = altura(&(*raiz)->direita);
+
+    if (esquerda > direita)
+        return 1 + esquerda;
+    else 
+        return 1 + direita;
+}
+
 void mostrarLista(NoLista *raiz) {
     printf("\nLista ordenada: \n");
     for(NoLista *aux = raiz; aux != NULL; aux = aux->proximo)
@@ -143,6 +155,9 @@ int main() {
     char binario[6] = {"\0"};
     printf("\nPre-ordem: \n");
     preOrdem(&raizArvore, binario);
+    
+    printf("\nAltura: %i\n", altura(&raizArvore));
+    char dicionario[altura(&raizArvore) + 1][256];
 
     return 0;
 }
