@@ -6,8 +6,8 @@
 typedef struct noArvore {
     char caractere;
     int frequencia;
-    struct noLista *direita;
-    struct noLista *esquerda;
+    struct noArvore *direita;
+    struct noArvore *esquerda;
 } NoArvore;
 
 typedef struct noLista {
@@ -15,7 +15,7 @@ typedef struct noLista {
     struct noLista *proximo;
 } NoLista;
 
-NoArvore *criarNoArvore(int frequencia, char caractere, NoLista *direita, NoLista *esquerda) {
+NoArvore *criarNoArvore(int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
     NoArvore *novo = (NoArvore*)malloc(sizeof(NoArvore));
     if (novo == NULL) return NULL;
     novo->frequencia = frequencia;
@@ -26,7 +26,7 @@ NoArvore *criarNoArvore(int frequencia, char caractere, NoLista *direita, NoList
     return novo;
 }
 
-NoLista *criarNoLista(int frequencia, char caractere, NoLista *direita, NoLista *esquerda) {
+NoLista *criarNoLista(int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
     NoLista *novo = (NoLista*)malloc(sizeof(NoLista));
     if (novo == NULL) return NULL;
     novo->no = criarNoArvore(frequencia, caractere, direita, esquerda);
@@ -35,7 +35,7 @@ NoLista *criarNoLista(int frequencia, char caractere, NoLista *direita, NoLista 
     return novo;
 }
 
-void inserirOrdenadoLista(NoLista **raiz, int frequencia, char caractere, NoLista *direita, NoLista *esquerda) {
+void inserirOrdenadoLista(NoLista **raiz, int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
     NoLista *novo = criarNoLista(frequencia, caractere, direita, esquerda);
 
     if (*raiz == NULL || (*raiz)->no->frequencia > frequencia) {
@@ -56,19 +56,25 @@ void inserirOrdenadoListaNULL(NoLista **raiz, int frequencia, char caractere) {
     inserirOrdenadoLista(raiz, frequencia, caractere, NULL, NULL);
 }
 
-NoLista *capturarNo(NoLista **raiz) {
+NoArvore *capturarNo(NoLista **raiz) {
     NoLista *aux = *raiz;
     *raiz = (*raiz)->proximo;
 
-    return aux;
+    return aux->no;
 }
 
-void montarArvoreDeHuffman(NoLista **raiz) {
-    if (*raiz == NULL) return;
+NoArvore *montarArvoreDeHuffman(NoLista **raiz) {
+    if (*raiz == NULL) {
+        printf("Lista vazia!\n");
+        return NULL;
+    }
 
     while ((*raiz)->proximo != NULL) {
-       inserirOrdenadoLista(raiz, (*raiz)->no->frequencia, '$', capturarNo(raiz), capturarNo(&(*raiz)->proximo));
+        NoArvore *direita = capturarNo(raiz), *esquerda = capturarNo(raiz);
+        inserirOrdenadoLista(raiz, direita->frequencia + esquerda->frequencia, '*', direita, esquerda);
     }
+
+    return (*raiz)->no;
 }
 
 void contarFrequencia(int *tabela) {
@@ -87,31 +93,48 @@ void contarFrequencia(int *tabela) {
 }
 
 void mostrarLista(NoLista *raiz) {
-    printf("Lista ordenada: \n");
+    printf("\nLista ordenada: \n");
     for(NoLista *aux = raiz; aux != NULL; aux = aux->proximo)
         printf("%c (%d)\n", (char)aux->no->caractere, aux->no->frequencia);
 }
 
 void mostrarTabela(int *tabela) {
-    printf("Tabela de frequencia: \n");
+    printf("\nTabela de frequencia: \n");
     for (int i = 0; i < TAM; i++)
         if (tabela[i] != 0)
             printf("%c [%d]\n", (char)i, tabela[i]);
 }
 
+void preOrdem(NoArvore **raiz) {
+    if (*raiz == NULL) return;
+    
+    printf("%c {%i}\n", (*raiz)->caractere, (*raiz)->frequencia);
+    preOrdem(&(*raiz)->esquerda);
+    preOrdem(&(*raiz)->direita);
+}
+
 int main() {
     int tabela[TAM] = {0};
-    NoLista *raiz = NULL;
+    NoLista *raizLista = NULL;
 
     contarFrequencia(tabela);
+    mostrarTabela(tabela);
 
     for (int i = 0; i < TAM; i++) 
         if (tabela[i] != 0)
-            inserirOrdenadoListaNULL(&raiz, tabela[i], i);
+            inserirOrdenadoListaNULL(&raizLista, tabela[i], i);
+        
+    mostrarLista(raizLista);
 
-    montarArvoreDeHuffman(&raiz);
-    
-    mostrarLista(raiz);
+    NoArvore *raizArvore = montarArvoreDeHuffman(&raizLista);
+
+    if (raizArvore == NULL) {
+        printf("Erro: a arvore não foi criada corretamente.\n");
+        return 1;
+    }
+
+    printf("\nPre-ordem\n");
+    preOrdem(&raizArvore);
 
     return 0;
 }
