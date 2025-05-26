@@ -35,7 +35,7 @@ NoLista *criarNoLista(int frequencia, char caractere, NoArvore *direita, NoArvor
     return novo;
 }
 
-void inserirOrdenadoLista(NoLista **raiz, int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
+void inserirOrdenadoListaRL(NoLista **raiz, int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
     NoLista *novo = criarNoLista(frequencia, caractere, direita, esquerda);
 
     if (*raiz == NULL || (*raiz)->no->frequencia > frequencia) {
@@ -52,8 +52,8 @@ void inserirOrdenadoLista(NoLista **raiz, int frequencia, char caractere, NoArvo
     aux->proximo = novo;
 }
 
-void inserirOrdenadoListaNULL(NoLista **raiz, int frequencia, char caractere) {
-    inserirOrdenadoLista(raiz, frequencia, caractere, NULL, NULL);
+void inserirOrdenadoLista(NoLista **raiz, int frequencia, char caractere) {
+    inserirOrdenadoListaRL(raiz, frequencia, caractere, NULL, NULL);
 }
 
 NoArvore *capturarNo(NoLista **raiz) {
@@ -71,7 +71,7 @@ NoArvore *montarArvoreDeHuffman(NoLista **raiz) {
 
     while ((*raiz)->proximo != NULL) {
         NoArvore *direita = capturarNo(raiz), *esquerda = capturarNo(raiz);
-        inserirOrdenadoLista(raiz, direita->frequencia + esquerda->frequencia, '*', direita, esquerda);
+        inserirOrdenadoListaRL(raiz, direita->frequencia + esquerda->frequencia, '*', direita, esquerda);
     }
 
     return (*raiz)->no;
@@ -122,7 +122,7 @@ int main() {
 
     for (int i = 0; i < TAM; i++) 
         if (tabela[i] != 0)
-            inserirOrdenadoListaNULL(&raizLista, tabela[i], i);
+            inserirOrdenadoLista(&raizLista, tabela[i], i);
         
     mostrarLista(raizLista);
 
@@ -133,7 +133,7 @@ int main() {
         return 1;
     }
 
-    printf("\nPre-ordem\n");
+    printf("\nPre-ordem: \n");
     preOrdem(&raizArvore);
 
     return 0;
