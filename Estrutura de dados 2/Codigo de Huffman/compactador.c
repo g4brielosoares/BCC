@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define TAM 256
 
@@ -105,12 +106,18 @@ void mostrarTabela(int *tabela) {
             printf("%c [%d]\n", (char)i, tabela[i]);
 }
 
-void preOrdem(NoArvore **raiz) {
+void preOrdem(NoArvore **raiz, char binario[]) {
     if (*raiz == NULL) return;
     
-    printf("%c {%i}\n", (*raiz)->caractere, (*raiz)->frequencia);
-    preOrdem(&(*raiz)->esquerda);
-    preOrdem(&(*raiz)->direita);
+    if (strcmp( "\0", binario) == 0) printf("raiz");
+    printf("%s - %c {%i}\n", binario, (*raiz)->caractere, (*raiz)->frequencia);
+
+    char esquerda[6] = {"\0"}, direita[6] = {"\0"};
+    strcpy(esquerda, binario);
+    strcpy(direita, binario);
+
+    preOrdem(&(*raiz)->esquerda, strcat(esquerda, "0"));
+    preOrdem(&(*raiz)->direita, strcat(direita, "1"));
 }
 
 int main() {
@@ -133,8 +140,9 @@ int main() {
         return 1;
     }
 
+    char binario[6] = {"\0"};
     printf("\nPre-ordem: \n");
-    preOrdem(&raizArvore);
+    preOrdem(&raizArvore, binario);
 
     return 0;
 }
