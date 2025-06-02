@@ -42,7 +42,7 @@ int estimativaSuperior(int indice, const vector<bool> &usados, int n) {
 void branchAndBound(int indice, vector<bool> &atual, int tamanhoAtual, vector<bool> &usados, const Lista &G, int &melhorTamanho, vector<bool> &melhorSolucao) {
     int n = G.size();
 
-    // Poda
+    // Poda: se não pode superar melhor solução, aborta
     int estimado = tamanhoAtual + estimativaSuperior(indice, usados, n);
     if (estimado <= melhorTamanho) return;
 
@@ -56,21 +56,23 @@ void branchAndBound(int indice, vector<bool> &atual, int tamanhoAtual, vector<bo
         if (!usados[i] && podeAdicionar(i, atual, G)) {
             atual[i] = true;
 
-            vector<int> marcados;
+            // Marca i e seus vizinhos como usados
+            usados[i] = true;
             for (int vizinho : G[i]) {
-                if (!usados[vizinho]) {
-                    usados[vizinho] = true;
-                    marcados.push_back(vizinho);
-                }
+                usados[vizinho] = true;
             }
 
             branchAndBound(i + 1, atual, tamanhoAtual + 1, usados, G, melhorTamanho, melhorSolucao);
 
-            atual[i] = false;
-            for (int vizinho : marcados)
+            // Desmarca i e vizinhos
+            usados[i] = false;
+            for (int vizinho : G[i]) {
                 usados[vizinho] = false;
+            }
+            atual[i] = false;
         }
 
+        // Caso não escolha i
         usados[i] = true;
         branchAndBound(i + 1, atual, tamanhoAtual, usados, G, melhorTamanho, melhorSolucao);
         usados[i] = false;
@@ -78,6 +80,9 @@ void branchAndBound(int indice, vector<bool> &atual, int tamanhoAtual, vector<bo
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n, m;
     cin >> n >> m;
 
