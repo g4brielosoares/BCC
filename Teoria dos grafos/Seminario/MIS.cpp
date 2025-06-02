@@ -15,7 +15,7 @@ void leituraGrafo(Lista &G, int m) {
 
 void escritaGrafo(Lista &G) {
     int n = G.size();
-    cout << "Lista de Adjacência:" << endl;
+    cout << "Lista de Adjacencia:" << endl;
     for (int u = 0; u < n; u++) {
         cout << u << ": ";
         for (auto v : G[u]) 
@@ -92,13 +92,13 @@ int main() {
 
     branchAndBound(0, atual, 0, usados, Grafo, melhorTamanho, melhorSolucao);
 
-    cout << "\nConjunto Independente Máximo: ";
+    cout << "\nConjunto Independente Maximo: ";
     for (int i = 0; i < n; ++i)
         if (melhorSolucao[i])
             cout << i << " ";
     cout << "\nTamanho: " << melhorTamanho << endl;
 
-    cout << "\nTotal Vértices: " << n << endl;
+    cout << "\nTotal Vertices: " << n << endl;
     cout << "Total Arestas: " << m << endl;
 
     return 0;
