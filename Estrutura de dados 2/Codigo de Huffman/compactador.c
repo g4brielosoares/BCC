@@ -23,7 +23,7 @@ NoArvore *criarNoArvore(int frequencia, char caractere, NoArvore *direita, NoArv
     novo->caractere = caractere;
     novo->direita = direita;
     novo->esquerda = esquerda;
-
+    
     return novo;
 }
 
@@ -32,8 +32,20 @@ NoLista *criarNoLista(int frequencia, char caractere, NoArvore *direita, NoArvor
     if (novo == NULL) return NULL;
     novo->no = criarNoArvore(frequencia, caractere, direita, esquerda);
     novo->proximo = NULL;
-
+    
     return novo;
+}
+
+int altura(NoArvore **raiz) {
+    if (*raiz == NULL) return -1;
+
+    int esquerda = altura(&(*raiz)->esquerda);
+    int direita = altura(&(*raiz)->direita);
+
+    if (esquerda > direita)
+        return 1 + esquerda;
+    else 
+        return 1 + direita;
 }
 
 void inserirOrdenadoListaRL(NoLista **raiz, int frequencia, char caractere, NoArvore *direita, NoArvore *esquerda) {
@@ -88,27 +100,107 @@ void contarFrequencia(int *tabela) {
 
     int caractere;
     while ((caractere = fgetc(entrada)) != EOF)
-        tabela[caractere]++;
+        tabela[(unsigned char)caractere]++;
 
     fclose(entrada);
 }
 
-int altura(NoArvore **raiz) {
-    if (*raiz == NULL) return -1;
+char **criarDicionario(int altura) {
+    char **dicionario = malloc(TAM * sizeof(char *));
 
-    int esquerda = altura(&(*raiz)->esquerda);
-    int direita = altura(&(*raiz)->direita);
+    for (int i = 0; i < TAM; i++) 
+        dicionario[i] = calloc(altura + 1, sizeof(char));
 
-    if (esquerda > direita)
-        return 1 + esquerda;
-    else 
-        return 1 + direita;
+    return dicionario;
 }
 
-void mostrarLista(NoLista *raiz) {
-    printf("\nLista ordenada: \n");
-    for(NoLista *aux = raiz; aux != NULL; aux = aux->proximo)
-        printf("%c (%d)\n", (char)aux->no->caractere, aux->no->frequencia);
+void montarDicionario(NoArvore *raiz, char **dicionario, char *memoria, int profundidade) {
+    if (raiz->esquerda == NULL && raiz->direita == NULL) {
+        memoria[profundidade] = '\0';
+        strcpy(dicionario[(unsigned char)raiz->caractere], memoria);
+        return;
+    }
+
+    if (raiz->esquerda != NULL) {
+        memoria[profundidade] = '0';
+        montarDicionario(raiz->esquerda, dicionario, memoria, profundidade + 1);
+    }
+
+    if (raiz->direita != NULL) {
+        memoria[profundidade] = '1';
+        montarDicionario(raiz->direita, dicionario, memoria, profundidade + 1);
+    }
+}
+
+void codificar(char **dicionario) {
+    FILE *entrada = fopen("../entrada.txt", "r");
+    FILE *saida = fopen("../saida.Jsus", "wb");
+    if (entrada == NULL || saida == NULL) {
+        printf("Erro ao abrir os arquivos\n");
+        exit(1);
+    }
+    
+    long long capacidade = 1024;
+    char *buffer = malloc(capacidade * sizeof(char));
+    if (!buffer) {
+        printf("Erro ao alocar memoria para o buffer\n");
+        fclose(entrada);
+        fclose(saida);
+        exit(1);
+    }
+    
+    int caractere;
+    long long totalBits = 0;
+    while ((caractere = fgetc(entrada)) != EOF) {
+        char *codigo = dicionario[(unsigned char)caractere];
+
+        for (int i = 0; codigo[i] != '\0'; i++) {
+            if (totalBits + 1 >= capacidade) {
+                capacidade *= 2;
+                buffer = realloc(buffer, capacidade * sizeof(char));
+                if (!buffer) {
+                    printf("Erro ao realocar memoria para o buffer\n");
+                    fclose(entrada);
+                    fclose(saida);
+                    exit(1);
+                }
+            }
+
+            buffer[totalBits++] = codigo[i];
+        }
+    }
+
+    int bitsExtra = (8 - (totalBits % 8)) % 8;
+    for (int i = 0; i < bitsExtra; i++) {
+        if (totalBits + 1 >= capacidade) {
+            capacidade *= 2;
+            buffer = realloc(buffer, capacidade * sizeof(char));
+            if (!buffer) {
+                printf("Erro ao realocar memoria para o buffer\n");
+                fclose(entrada);
+                fclose(saida);
+                exit(1);
+            }
+        }
+
+        buffer[totalBits++] = '0';
+    }
+
+    fputc(bitsExtra, saida);
+
+    for (long long i = 0; i < totalBits; i += 8) {
+        unsigned char byte = 0;
+        for (int j = 0; j < 8; j++) {
+            if (buffer[i + j] == '1') {
+                byte |= (1 << (7 - j));
+            }
+        }
+        fwrite(&byte, sizeof(unsigned char), 1, saida);
+    }
+
+    free(buffer);
+    fclose(entrada);
+    fclose(saida);
 }
 
 void mostrarTabela(int *tabela) {
@@ -118,46 +210,60 @@ void mostrarTabela(int *tabela) {
             printf("%c [%d]\n", (char)i, tabela[i]);
 }
 
-void preOrdem(NoArvore **raiz, char binario[]) {
+void mostrarLista(NoLista *raiz) {
+    printf("\nLista ordenada: \n");
+    for(NoLista *aux = raiz; aux != NULL; aux = aux->proximo)
+        printf("%c (%d)\n", (char)aux->no->caractere, aux->no->frequencia);
+}
+
+void preOrdem(NoArvore **raiz) {
     if (*raiz == NULL) return;
     
-    if (strcmp( "\0", binario) == 0) printf("raiz");
-    printf("%s - %c {%i}\n", binario, (*raiz)->caractere, (*raiz)->frequencia);
+    printf("%c {%i}\n", (*raiz)->caractere, (*raiz)->frequencia);
+    preOrdem(&(*raiz)->esquerda);
+    preOrdem(&(*raiz)->direita);
+}
 
-    char esquerda[6] = {"\0"}, direita[6] = {"\0"};
-    strcpy(esquerda, binario);
-    strcpy(direita, binario);
-
-    preOrdem(&(*raiz)->esquerda, strcat(esquerda, "0"));
-    preOrdem(&(*raiz)->direita, strcat(direita, "1"));
+void mostrarDicionario(char **dicionario) {
+    for (int i = 0; i < TAM; i++) {
+        if (*dicionario[i] != '\0') 
+            printf("%c <%s>\n", i, dicionario[i]);
+    }
 }
 
 int main() {
-    int tabela[TAM] = {0};
     NoLista *raizLista = NULL;
-
+    NoArvore *raizArvore = NULL;
+    int tabela[TAM] = {0};
+    int alturaArvore;
+    char **dicionario;
+    
     contarFrequencia(tabela);
     mostrarTabela(tabela);
 
     for (int i = 0; i < TAM; i++) 
         if (tabela[i] != 0)
-            inserirOrdenadoLista(&raizLista, tabela[i], i);
-        
+            inserirOrdenadoLista(&raizLista, tabela[i], i);  
+
     mostrarLista(raizLista);
 
-    NoArvore *raizArvore = montarArvoreDeHuffman(&raizLista);
+    raizArvore = montarArvoreDeHuffman(&raizLista);
 
-    if (raizArvore == NULL) {
-        printf("Erro: a arvore não foi criada corretamente.\n");
-        return 1;
-    }
-
-    char binario[6] = {"\0"};
     printf("\nPre-ordem: \n");
-    preOrdem(&raizArvore, binario);
-    
-    printf("\nAltura: %i\n", altura(&raizArvore));
-    char dicionario[altura(&raizArvore) + 1][256];
+    preOrdem(&raizArvore);
+
+    alturaArvore = altura(&raizArvore);
+    printf("\nAltura: %i\n", alturaArvore);
+
+    char memoria[alturaArvore + 1];
+    dicionario = criarDicionario(alturaArvore);
+
+    montarDicionario(raizArvore, dicionario, memoria, 0);
+
+    printf("\nDicionario: \n");
+    mostrarDicionario(dicionario);
+
+    codificar(dicionario);
 
     return 0;
 }
