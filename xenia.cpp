@@ -14,9 +14,9 @@ int main() {
 
     sort(vet.begin(), vet.end());
 
-    for (auto c : vet) {
-        cout << c;
-        if(c != vet.back()) cout << "+";
+    for (long unsigned int i = 0; i < vet.size(); i++) {
+        cout << vet[i];
+        if(i != vet.size() - 1) cout << "+";
     }
     cout << "\n";
 
