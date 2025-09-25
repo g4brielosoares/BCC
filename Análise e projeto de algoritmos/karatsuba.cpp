@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//./karatsuba < dados/10.txt > SaidaDadosKaratsuba/10.txt
+
+//diff SaidaDadosKaratsuba/10.txt SaidaDados/10.txt
+@g4brielosoares ➜ /workspaces/BCC/Análise e projeto de algoritmos (main) $ ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.t
+xt
+
 string soma_str(string str1, string str2);
 string sub_str(string str1, string str2);
 
