@@ -1,7 +1,59 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//./karatsuba < dados/10.txt > SaidaDadosKaratsuba/10.txt
+// time ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.txt
+
+/*
+    10 = {
+        time ./karatsuba < dados/10.txt > SaidaDadosKaratsuba/10.txt
+    
+        real    0m0.006s
+        user    0m0.003s
+        sys     0m0.003s
+
+        diff SaidaDadosKaratsuba/10.txt SaidaDados/10.txt = { sem diferenças }
+    }
+
+    100 = {
+        time ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.txt
+
+        real    0m0.056s
+        user    0m0.004s
+        sys     0m0.004s
+
+        diff SaidaDadosKaratsuba/100.txt SaidaDados/100.txt = { sem diferenças }
+    }
+    
+    1000 = {
+        time ./karatsuba < dados/1000.txt > SaidaDadosKaratsuba/1000.txt
+
+        real    0m0.132s
+        user    0m0.131s
+        sys     0m0.001s
+
+        diff SaidaDadosKaratsuba/1000.txt SaidaDados/1000.txt = { sem diferenças }
+    }
+
+    10000 = {
+        time ./karatsuba < dados/10000.txt > SaidaDadosKaratsuba/10000.txt
+
+        real    0m4.839s
+        user    0m4.831s
+        sys     0m0.006s
+
+        diff SaidaDadosKaratsuba/10000.txt SaidaDados/10000.txt = { sem diferenças }
+    }
+
+    100000 = {
+        time ./karatsuba < dados/100000.txt > SaidaDadosKaratsuba/100000.txt
+
+        real    3m5.231s
+        user    3m5.132s
+        sys     0m0.032s
+
+        diff SaidaDadosKaratsuba/100000.txt SaidaDados/100000.txt = { sem diferenças }
+    }
+*/
 
 //diff SaidaDadosKaratsuba/10.txt SaidaDados/10.txt
 @g4brielosoares ➜ /workspaces/BCC/Análise e projeto de algoritmos (main) $ ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.t
