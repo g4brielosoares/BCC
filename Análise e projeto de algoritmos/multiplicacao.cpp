@@ -47,7 +47,13 @@ using namespace std;
     }
 
     100000 = {
-        
+        time ./multiplicacao < dados/100000.txt > SaidaDadosMultiplicacao/100000.txt
+
+        real    2m25.216s
+        user    2m25.184s
+        sys     0m0.024s
+
+        diff SaidaDadosMultiplicacao/100000.txt SaidaDados/out_100000.txt = { sem diferenças }
     }
 */
 
