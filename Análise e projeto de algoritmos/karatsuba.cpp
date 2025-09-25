@@ -3,6 +3,8 @@ using namespace std;
 
 // time ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.txt
 
+// diff SaidaDadosKaratsuba/10.txt SaidaDados/10.txt
+
 /*
     10 = {
         time ./karatsuba < dados/10.txt > SaidaDadosKaratsuba/10.txt
@@ -55,7 +57,6 @@ using namespace std;
     }
 */
 
-//diff SaidaDadosKaratsuba/10.txt SaidaDados/10.txt
 @g4brielosoares ➜ /workspaces/BCC/Análise e projeto de algoritmos (main) $ ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.t
 xt
 
