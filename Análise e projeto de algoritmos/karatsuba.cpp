@@ -57,9 +57,6 @@ using namespace std;
     }
 */
 
-@g4brielosoares ➜ /workspaces/BCC/Análise e projeto de algoritmos (main) $ ./karatsuba < dados/100.txt > SaidaDadosKaratsuba/100.t
-xt
-
 string soma_str(string str1, string str2);
 string sub_str(string str1, string str2);
 
