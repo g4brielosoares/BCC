@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="alunos.xsl"?>
+<alunos>
+    <aluno>
+        <nome>João</nome>
+        <matricula>20230001</matricula>
+    </aluno>
+    <aluno>
+        <nome>Maria</nome>
+        <matricula>20230002</matricula>
+    </aluno>
+</alunos>
+
