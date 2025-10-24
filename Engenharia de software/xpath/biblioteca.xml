@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <livro>
+        <titulo>Aprendendo XML</titulo>
+        <autor>João Silva</autor>
+        <ano>2020</ano>
+        <categoria>Programação</categoria>
+    </livro>
+    <livro>
+        <titulo>Banco de Dados com SQL</titulo>
+        <autor>Maria Oliveira</autor>
+        <ano>2018</ano>
+        <categoria>Banco de Dados</categoria>
+    </livro>
+    <livro>
+        <titulo>Python para Iniciantes</titulo>
+        <autor>João Silva</autor>
+        <ano>2022</ano>
+        <categoria>Programação</categoria>
+    </livro>
+</biblioteca>

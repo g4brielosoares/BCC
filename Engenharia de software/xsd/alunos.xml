@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alunos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="alunos.xsd">
+    <aluno>
+        <nome>João da Silva</nome>
+        <matricula>20231001</matricula>
+        <curso>Ciência da Computação</curso>
+        <idade>20</idade>
+    </aluno>
+    <aluno>
+        <nome>Maria Souza</nome>
+        <matricula>20231002</matricula>
+        <curso>Engenharia de Software</curso>
+        <idade>22</idade>
+    </aluno>
+    <aluno>
+        <nome>Gabriel Soares</nome>
+        <matricula>20231003</matricula>
+        <curso>Ciência da Computação</curso>
+        <idade>20</idade>
+    </aluno>
+</alunos>
+    
